@@ -18,7 +18,9 @@ function MainComment () {
         return <h2>загрузка</h2>
     }
     return(
-        <Comment key={image.id} image={image} />
+        <div className={`commentMain ${parseInt(params) === image.id ? "active" : ""}`}>
+        <Comment  key={image.id} image={image} />
+        </div>
     )}
 }
 export default MainComment

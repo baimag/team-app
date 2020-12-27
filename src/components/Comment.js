@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 import React from "react";
 import GetImage from "./GetImage";
 import Comments from "./Comments";
@@ -11,9 +11,14 @@ function Comment(props) {
 
     return(
         loading ? "идет загрузка" :
-              <div className="comment">
+              <div className={`comment ${params === props.image.id ? "active" : ""}`}>
+                  <div className="content">
+                      <NavLink  exact activeClassName="" className="exit" to="/">
+                          <i className="fa fa-times" aria-hidden="true"></i>
+                      </NavLink>
                 <GetImage image={props.image}/>
                 <Comments image={props.image} params={params}/>
+                  </div>
               </div>
     )
 }

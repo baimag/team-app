@@ -1,3 +1,5 @@
+import {NavLink} from "react-router-dom";
+
 function Comments(props){
 
     return (
@@ -5,10 +7,7 @@ function Comments(props){
             {props.params !== props.image.id ? "" :
                 props.image.comments.map(item => {
                     return (
-                        <div key={props.image.id}>
-                            <div className="ext">
-                                <i className="fa fa-times" aria-hidden="true"></i>
-                            </div>
+                        <div className="www" key={props.image.id}>
                             <div className="data">
                                 {item.date}
                             </div>
