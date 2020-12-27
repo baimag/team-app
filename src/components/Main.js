@@ -24,8 +24,8 @@ function Main(){
                                 <Images img={im} key={im.id}/>
                             )
                     })}
+
             </div>
-            <GetImage/>
             <Footer/>
         </div>
     )

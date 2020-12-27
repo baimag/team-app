@@ -1,14 +1,18 @@
 function Comments(props){
 
     return (
-        <div>
-            {props.image.comments.map(item => {
+        <div className="commentUsers">
+            {props.params !== props.image.id ? "" :
+                props.image.comments.map(item => {
                     return (
                         <div key={props.image.id}>
-                            <div>
+                            <div className="ext">
+                                <i className="fa fa-times" aria-hidden="true"></i>
+                            </div>
+                            <div className="data">
                                 {item.date}
                             </div>
-                            <div>
+                            <div className="comments">
                                 {item.text}
                             </div>
                         </div>

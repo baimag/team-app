@@ -1,6 +1,8 @@
 const initialState = {
     items:{},
-    loadItems:false
+    loadItems:false,
+    textOriginal: "",
+    textAdd: ""
 }
 
 const CommentReducer = (state = initialState, action) => {
@@ -15,6 +17,10 @@ const CommentReducer = (state = initialState, action) => {
             ...state,
             items: action.payload,
             loadItems: false
+        }
+        case "add/set": return {
+            ...state,
+            textAdd: action.payload
         }
         default:return state;
     }

@@ -4,6 +4,8 @@
     display: flex;
     margin: auto;
     justify-content: center;
+    max-width: 100%;
+
 }
 .img{
 padding: 15px 15px;
@@ -15,10 +17,98 @@ padding: 15px 15px;
     width: 1540px;
     margin: auto;
     padding-top: 380px;
-}
-img{
-    width: 100%;
+    max-width: 100%;
+
 }
 .bigimg{
-    width: 30%;
+    width: 400px;
+    padding: 20px;
+    max-width: 100%;
+
 }
+.comment{
+    display: flex;
+    width: 600px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+    max-width: 100%;
+
+
+}
+.comments{
+    padding: 20px 0px;
+}
+.data{
+    padding: 20px 0px;
+}
+.com{
+    padding: 20px 0px;
+}
+input{
+    border: 1px solid grey;
+    width: 300px;
+    height: 25px;
+    max-width: 100%;
+
+}
+.button{
+    background-color: cornflowerblue;
+    text-align: center;
+    width: 305px;
+    margin: 20px 0px;
+    max-width: 100%;
+
+}
+.btn{
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+}
+.bg{
+    width: 305px;
+    max-width: 100%;
+}
+.commentUsers{
+    margin-right: 400px;
+    max-width: 100%;
+
+}
+.ext{
+    margin-left: 190%;
+    font-size: 30px;
+    max-width: 100%;
+    flex-wrap: wrap;
+
+}
+@media only screen and (max-width: 450px) {
+    .comment{
+        width: 100%;
+    }
+    .bg{
+        width: 60%;
+    }
+    .commentUsers{
+        margin-right: 60px;
+    }
+    .ext{
+        margin: 0;
+    }
+    .data{
+        right:110px;
+        bottom: 10px;
+        position: relative;
+    }
+    .comments{
+        right:110px;
+        bottom: 10px;
+        position: relative;
+    }
+    .ext{
+        right:10px;
+        position: relative;
+    }
+
+}
+

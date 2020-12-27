@@ -6,15 +6,15 @@ import {useSelector} from "react-redux";
 
 
 function Comment(props) {
-    const loading = useSelector(state => state.comments.loadItems)
     const params = parseInt(useParams().id);
+    const loading = useSelector(state => state.comments.loadItems)
+
     return(
         loading ? "идет загрузка" :
-            <div>
+              <div className="comment">
                 <GetImage image={props.image}/>
                 <Comments image={props.image} params={params}/>
-            </div>
-
+              </div>
     )
 }
 export default Comment

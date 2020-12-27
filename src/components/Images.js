@@ -6,7 +6,7 @@ function Images(props){
     return(
         <div className="img">
             <NavLink to={`/${props.img.id}`}>
-                <img  src={props.img.url}/>
+                <img  className="img" src={props.img.url}/>
             </NavLink>
         </div>
 

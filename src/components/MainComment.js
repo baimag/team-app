@@ -8,14 +8,18 @@ function MainComment () {
     const image = useSelector(store=>store.comments.items)
     const dispatch = useDispatch()
     const params = useParams().id
+    const loading = useSelector(state => state.comments.loadItems);
     useEffect(() => {
         if(params !== undefined) {
             dispatch(loadImg(params));
         }
     }, [params]);
+    {if(loading) {
+        return <h2>загрузка</h2>
+    }
     return(
-        <Comment image={image} />
-    )
+        <Comment key={image.id} image={image} />
+    )}
 }
 export default MainComment
 

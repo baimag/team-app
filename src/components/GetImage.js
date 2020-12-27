@@ -1,9 +1,11 @@
 import React from "react";
+import AddComment from "./Addcomment";
 
 function GetImage(props) {
     return(
     <div className="bigimg">
-        <img  src={props.image.url} alt={"404"}/>
+        <img  className="bg" src={props.image.url} alt="none"/>
+        <AddComment mage={props.image}/>
     </div>
     )
 }

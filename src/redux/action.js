@@ -24,3 +24,9 @@ export const loadImg = (id) => {
             }))
     }
 }
+export const setAddText = (text) => {
+    return {
+        type: "add/set",
+        payload: text
+    }
+}
