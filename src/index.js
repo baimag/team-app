@@ -1,23 +1,31 @@
-
-import ReactDOM from 'react-dom';
-import App from "./components/App"
+import ReactDOM from "react-dom";
+import App from "./components/App";
 import React from "react";
-import {Provider} from "react-redux";
-import store from "./redux";
-import {BrowserRouter} from "react-router-dom";
+import { Provider } from "react-redux";
+import { applyMiddleware, createStore } from "redux";
+import thunk from "redux-thunk";
+import { createLogger } from "redux-logger";
+import "bootstrap/dist/css/bootstrap-grid.min.css"
 
+const logger = createLogger({
+  diff: true,
+  collapsed: true,
+});
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
 
-
+const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </Provider>
-    </React.StrictMode>
-,
-document.getElementById('root')
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
