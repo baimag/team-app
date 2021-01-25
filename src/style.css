@@ -1,0 +1,10 @@
+.container {
+    width: 600px;
+    margin: auto;
+}
+
+.header {
+    font-size: 2em;
+    text-align: center;
+    border-bottom: 1px solid whitesmoke;
+}
