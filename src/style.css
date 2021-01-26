@@ -1,0 +1,36 @@
+.container {
+    width: 800px;
+    margin: auto;
+}
+
+.header {
+    font-size: 2em;
+    text-align: center;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 15px;
+}
+
+.footer {
+    font-size: 2em;
+    text-align: center;
+    border-top: 1px solid whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.icon {
+    padding: 0 10px;
+    list-style: none;
+}
+
+.icon:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
