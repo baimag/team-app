@@ -5,3 +5,6 @@
 .mainContent{
     list-style: none;
 }
+.delete{
+    cursor: pointer;
+}
