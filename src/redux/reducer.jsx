@@ -19,22 +19,22 @@ const reducer = (state = initialState, action) => {
     case "delete":
       return {
         ...state,
-        todos: state.todos.filter((todo) => todo.id !== action.payload)
-      }
+        todos: state.todos.filter((todo) => todo.id !== action.payload),
+      };
     case "make":
       return {
         ...state,
         // favorite: true,
         todos: state.todos.map((todo) => {
-          if(todo.id === todo.payload) {
+          if (todo.id === todo.payload) {
             return {
               ...todo,
-              title: "Favorite"
-            }
+              title: "Favorite",
+            };
           }
-          return todo
-        })
-      }
+          return todo;
+        }),
+      };
 
     default:
       return state;
