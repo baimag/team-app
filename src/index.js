@@ -6,18 +6,13 @@ import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import { createLogger } from "redux-logger";
 import "bootstrap/dist/css/bootstrap-grid.min.css"
-
+import reducer from "./redux/reducer";
+import "./style.css"
 const logger = createLogger({
   diff: true,
   collapsed: true,
 });
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
 
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
