@@ -5,13 +5,13 @@ import { Provider } from "react-redux";
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import { createLogger } from "redux-logger";
-<<<<<<< HEAD
+
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 import reducer from "./redux/reducer";
 import "./style.css"
-=======
 
->>>>>>> main
+
+
 const logger = createLogger({
   diff: true,
   collapsed: true,
